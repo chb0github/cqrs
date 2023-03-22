@@ -1,0 +1,162 @@
+{
+  "object_kind": "push",
+  "event_name": "push",
+  "before": "04bf09754aaaaf31773bb0796c5e061a0844072a",
+  "after": "cdd979e8d26524d6be494b9189a37cb10c8a4be4",
+  "ref": "refs/heads/23.03-vlab-integrations",
+  "checkout_sha": "cdd979e8d26524d6be494b9189a37cb10c8a4be4",
+  "message": null,
+  "user_id": 68,
+  "user_name": "Drew Kalina",
+  "user_username": "dkalina",
+  "user_email": "",
+  "user_avatar": "https://secure.gravatar.com/avatar/2ac7529912673ba994a0ee32d3632c9f?s=80&d=identicon",
+  "project_id": 430,
+  "project": {
+    "id": 430,
+    "name": "wr-studio-installer",
+    "description": "",
+    "web_url": "https://gitlab.aws-eu-north-1.devstar.cloud/wrai/tools/wr-studio-installer",
+    "avatar_url": null,
+    "git_ssh_url": "git@gitlab.aws-eu-north-1.devstar.cloud:wrai/tools/wr-studio-installer.git",
+    "git_http_url": "https://gitlab.aws-eu-north-1.devstar.cloud/wrai/tools/wr-studio-installer.git",
+    "namespace": "tools",
+    "visibility_level": 10,
+    "path_with_namespace": "wrai/tools/wr-studio-installer",
+    "default_branch": "develop",
+    "ci_config_path": null,
+    "homepage": "https://gitlab.aws-eu-north-1.devstar.cloud/wrai/tools/wr-studio-installer",
+    "url": "git@gitlab.aws-eu-north-1.devstar.cloud:wrai/tools/wr-studio-installer.git",
+    "ssh_url": "git@gitlab.aws-eu-north-1.devstar.cloud:wrai/tools/wr-studio-installer.git",
+    "http_url": "https://gitlab.aws-eu-north-1.devstar.cloud/wrai/tools/wr-studio-installer.git"
+  },
+  "commits": [
+    {
+      "id": "4ef59c186e31a1de7364506bf2d75522ece64652",
+      "message": "2303 Vlab Updates\n\n* DEVOPS-15542 and DEVOPS-26732 Integrate vault.\n* Adds resources for pods\n* Use separate service accounts for pods\n* DEVOPS-25317 Paramterize some resources\n",
+      "title": "2303 Vlab Updates",
+      "timestamp": "2023-03-13T09:35:42-07:00",
+      "url": "https://gitlab.aws-eu-north-1.devstar.cloud/wrai/tools/wr-studio-installer/-/commit/4ef59c186e31a1de7364506bf2d75522ece64652",
+      "author": {
+        "name": "Drew Kalina",
+        "email": "dkalina@windriver.com"
+      },
+      "added": [
+        "modules/tools/modules/hive/templates/jobs/secret-delete.yaml",
+        "modules/tools/modules/hive/templates/serviceaccount/api_gateway.yaml",
+        "modules/tools/modules/hive/templates/serviceaccount/install.yaml",
+        "modules/tools/modules/hive/templates/serviceaccount/reservations.yaml",
+        "modules/tools/modules/hive/templates/serviceaccount/ssh_handler.yaml",
+        "modules/tools/modules/hive/templates/serviceaccount/ssh_portal.yaml",
+        "modules/tools/modules/hive/templates/serviceaccount/target-control.yaml",
+        "modules/tools/modules/hive/templates/serviceaccount/target-manager.yaml",
+        "modules/tools/modules/hive/templates/serviceaccount/virtual_target_control.yaml",
+        "modules/tools/modules/hive/vault.tf"
+      ],
+      "modified": [
+        "modules/tools/modules/hive/local.tf",
+        "modules/tools/modules/hive/main.tf",
+        "modules/tools/modules/hive/providers.tf",
+        "modules/tools/modules/hive/templates/deployments/api-gateway.yaml",
+        "modules/tools/modules/hive/templates/deployments/hive-cli-tool.yaml",
+        "modules/tools/modules/hive/templates/deployments/public-api.yaml",
+        "modules/tools/modules/hive/templates/deployments/reservation.yaml",
+        "modules/tools/modules/hive/templates/deployments/ssh-handler.yaml",
+        "modules/tools/modules/hive/templates/deployments/ssh-portal.yaml",
+        "modules/tools/modules/hive/templates/deployments/target-control.yaml",
+        "modules/tools/modules/hive/templates/deployments/target-manager.yaml",
+        "modules/tools/modules/hive/templates/deployments/ui.yaml",
+        "modules/tools/modules/hive/templates/deployments/virtual-target.yaml",
+        "modules/tools/modules/hive/templates/ingress/ui.yaml",
+        "modules/tools/modules/hive/templates/jobs/db-init.yaml",
+        "modules/tools/modules/hive/templates/jobs/install.yaml",
+        "modules/tools/modules/hive/templates/pvc/pvc-logs.yaml",
+        "modules/tools/modules/hive/templates/roles/RoleBinding-hive.yaml",
+        "modules/tools/modules/hive/templates/roles/RoleBinding-vt.yaml",
+        "modules/tools/modules/hive/templates/roles/role-hive-vt-ns.yaml",
+        "modules/tools/modules/hive/values.yaml",
+        "modules/tools/modules/hive/variables.tf"
+      ],
+      "removed": [
+        "modules/tools/modules/hive/templates/pvc/pvc-database.yaml"
+      ]
+    },
+    {
+      "id": "6b9fc9909371763c6c69c57526352f637ca6cafd",
+      "message": "Changing resources to strings\n",
+      "title": "Changing resources to strings",
+      "timestamp": "2023-03-13T09:35:42-07:00",
+      "url": "https://gitlab.aws-eu-north-1.devstar.cloud/wrai/tools/wr-studio-installer/-/commit/6b9fc9909371763c6c69c57526352f637ca6cafd",
+      "author": {
+        "name": "Drew Kalina",
+        "email": "dkalina@windriver.com"
+      },
+      "added": [
+
+      ],
+      "modified": [
+        "modules/tools/modules/hive/main.tf",
+        "modules/tools/modules/hive/values.yaml",
+        "modules/tools/modules/hive/variables.tf"
+      ],
+      "removed": [
+
+      ]
+    },
+    {
+      "id": "9785a445e1b465d6d52134e4e5bba23d9d51c1b9",
+      "message": "Fixing annotations\n",
+      "title": "Fixing annotations",
+      "timestamp": "2023-03-13T09:35:42-07:00",
+      "url": "https://gitlab.aws-eu-north-1.devstar.cloud/wrai/tools/wr-studio-installer/-/commit/9785a445e1b465d6d52134e4e5bba23d9d51c1b9",
+      "author": {
+        "name": "Drew Kalina",
+        "email": "dkalina@windriver.com"
+      },
+      "added": [
+
+      ],
+      "modified": [
+        "modules/tools/modules/hive/templates/deployments/target-manager.yaml",
+        "modules/tools/modules/hive/templates/deployments/virtual-target.yaml"
+      ],
+      "removed": [
+
+      ]
+    },
+    {
+      "id": "cdd979e8d26524d6be494b9189a37cb10c8a4be4",
+      "message": "Fix variables\n",
+      "title": "Fix variables",
+      "timestamp": "2023-03-13T09:35:42-07:00",
+      "url": "https://gitlab.aws-eu-north-1.devstar.cloud/wrai/tools/wr-studio-installer/-/commit/cdd979e8d26524d6be494b9189a37cb10c8a4be4",
+      "author": {
+        "name": "Drew Kalina",
+        "email": "dkalina@windriver.com"
+      },
+      "added": [
+
+      ],
+      "modified": [
+        "modules/tools/modules/hive/main.tf",
+        "modules/tools/modules/hive/values.yaml",
+        "modules/tools/modules/hive/variables.tf"
+      ],
+      "removed": [
+
+      ]
+    }
+  ],
+  "total_commits_count": 4,
+  "push_options": {
+  },
+  "repository": {
+    "name": "wr-studio-installer",
+    "url": "git@gitlab.aws-eu-north-1.devstar.cloud:wrai/tools/wr-studio-installer.git",
+    "description": "",
+    "homepage": "https://gitlab.aws-eu-north-1.devstar.cloud/wrai/tools/wr-studio-installer",
+    "git_http_url": "https://gitlab.aws-eu-north-1.devstar.cloud/wrai/tools/wr-studio-installer.git",
+    "git_ssh_url": "git@gitlab.aws-eu-north-1.devstar.cloud:wrai/tools/wr-studio-installer.git",
+    "visibility_level": 10
+  }
+}

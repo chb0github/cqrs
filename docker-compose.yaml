@@ -1,0 +1,25 @@
+version: "3"
+services:
+  read_cache:
+    image: httpd/httpd
+    volumes:
+      - mapped:/var/html
+  maps:
+    image: httpd/httpd
+    volumes:
+      - maps:/var/html
+  raw:
+    image: httpd/httpd
+    volumes:
+      - raw:/var/html
+  remapper:
+    build:
+      context: .
+    volumes:
+      - raw:/root/input:r
+      - maps:/root/maps:r
+      - mapped:/root/output:rw
+volumes:
+  raw:
+  mapped:
+  maps:

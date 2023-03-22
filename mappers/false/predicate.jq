@@ -1,0 +1,1 @@
+.object_kind == "foo"
