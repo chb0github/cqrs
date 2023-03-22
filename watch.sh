@@ -14,8 +14,8 @@ watch_dir() {
   # shellcheck disable=SC2039
   local dirs
   # only find directories that hav a predicate and mapper pair
-  dirs=$(find "${mappers}"  -type f -name 'predicate.jq' -exec dirname {} \; |
-    xargs -r  -I {} find {} -name 'mapper.jq' -exec dirname {} \; | sort -u)
+  dirs=$(find "${mappers}"  -type f -print0 -name 'predicate.jq' -exec dirname {} \; |
+    xargs -0 -r  -I {} find {} -name 'mapper.jq' -exec dirname {} \; | sort -u)
 
   inotifywait -qm -e create --format '%w%f' "${in}" | while read -r json; do
     for dir in ${dirs}; do
