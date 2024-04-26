@@ -3,22 +3,37 @@ services:
   read_cache:
     image: httpd/httpd
     volumes:
-      - mapped:/var/html
+      - mapped:/usr/local/apache2/htdocs/
+    ports:
+      - "8080:80"
   maps:
     image: httpd/httpd
     volumes:
-      - maps:/var/html
+      - maps:/usr/local/apache2/htdocs/
   raw:
     image: httpd/httpd
     volumes:
-      - raw:/var/html
-  remapper:
+      - raw:/usr/local/apache2/htdocs/
+  remaper:
     build:
       context: .
     volumes:
       - raw:/root/input:r
       - maps:/root/maps:r
       - mapped:/root/output:rw
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
 volumes:
   raw:
   mapped:
